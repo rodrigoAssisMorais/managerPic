@@ -1,0 +1,7 @@
+<mp-search (onTyping)="filter = $event" [value]="filter"></mp-search>
+
+<mp-photos [photos]="photos | filterByDescription: filter"></mp-photos>
+<mp-load-button 
+    (click)="load()" 
+    [hasMore]="hasMore">
+</mp-load-button>
