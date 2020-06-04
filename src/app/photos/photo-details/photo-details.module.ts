@@ -28,6 +28,4 @@ import { ShowIfLoggedModule } from 'src/app/shared/directives/show-if-logged/sho
         ShowIfLoggedModule,
     ],
 })
-export class PhotoDetailsModule {
-
-}
+export class PhotoDetailsModule { }
