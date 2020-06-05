@@ -40,7 +40,12 @@ export class PhotoService {
         formData.append('allowComments', allowComments ? 'true' : 'false');
         formData.append('imageFile', file);
         console.log('service.upload');
-        return this.http.post(`${API}/photos/upload`, formData);
+        return this.http.post(`${API}/photos/upload`,
+            formData,
+            {
+                observe: 'events',
+                reportProgress: true
+            });
 
     }
 
