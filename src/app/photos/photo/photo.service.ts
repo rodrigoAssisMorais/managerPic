@@ -20,7 +20,7 @@ export class PhotoService {
     }
     
     listPhotosFromUserPaginated(userName: string, page: number){
-        let path = `${API}/${userName}/photosx`;
+        let path = `${API}/${userName}/photos`;
         
         const params = new HttpParams()
         .append('page', page.toString());

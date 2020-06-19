@@ -6,6 +6,7 @@ import { UserNotTakenValidatorService } from './user-not-taken.validator.service
 import { SignUpServices } from './signup.services';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
+import { userNamePassword } from './username-password.validator';
 
 @Component({
   templateUrl: './signup.component.html',
@@ -60,6 +61,9 @@ export class SignUpComponent implements OnInit {
           Validators.maxLength(14)
         ]
       ]
+    },
+    {
+      validator: userNamePassword
     })
 
     // dar focu no input de email

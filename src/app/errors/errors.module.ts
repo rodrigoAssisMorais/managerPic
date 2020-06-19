@@ -2,13 +2,17 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GlobalErrorHandler } from './global-error-handler/global-error-handler';
+import { RouterModule } from '@angular/router';
+import { GlobalErrorComponent } from './global-error/global-error.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
-    NotFoundComponent
+    NotFoundComponent,
+    GlobalErrorComponent
   ],
   providers: [{
     provide: ErrorHandler,

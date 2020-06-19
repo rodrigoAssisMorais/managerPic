@@ -57,6 +57,11 @@
         
         <mp-vmessage *ngIf="signupForm.get('password').errors?.maxlength" text="maximun lenght">
         </mp-vmessage>
+
+        <mp-vmessage
+            *ngIf="signupForm.errors?.userNamePassword"
+            text="Username and password must be different">
+        </mp-vmessage>
     
     </div>
 
